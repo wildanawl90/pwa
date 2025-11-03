@@ -56,11 +56,6 @@ npm run dev
 
 6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Admin Access
-
-- Email: admin@lifewildsmp.my.id
-- Password: Vivobookjaya12#
-
 ## Deployment
 
 ### Vercel (Recommended)
