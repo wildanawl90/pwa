@@ -5,6 +5,7 @@
   "/contact/page": "/contact",
   "/dashboard/page": "/dashboard",
   "/login/page": "/login",
+  "/music/page": "/music",
   "/offline/page": "/offline",
   "/page": "/"
 }

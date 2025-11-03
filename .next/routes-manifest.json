@@ -64,6 +64,12 @@
       "namedRegex": "^/login(?:/)?$"
     },
     {
+      "page": "/music",
+      "regex": "^/music(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/music(?:/)?$"
+    },
+    {
       "page": "/offline",
       "regex": "^/offline(?:/)?$",
       "routeKeys": {},

@@ -5,6 +5,7 @@
   "/contact/page": "app/contact/page.js",
   "/dashboard/page": "app/dashboard/page.js",
   "/login/page": "app/login/page.js",
+  "/music/page": "app/music/page.js",
   "/offline/page": "app/offline/page.js",
   "/page": "app/page.js"
 }
