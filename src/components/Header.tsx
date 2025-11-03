@@ -4,12 +4,30 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useTheme } from './ThemeProvider'
+import { useAuth } from './AuthProvider'
+import { signOut } from 'firebase/auth'
+import { auth } from '@/lib/firebase'
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
+  const { user, loading } = useAuth()
 
-  const navItems = [
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth)
+      // Cookie will be cleared by middleware
+    } catch (error) {
+      console.error('Sign out error:', error)
+    }
+  }
+
+  const navItems = user ? [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
+    { href: '/dashboard', label: 'Dashboard' },
+  ] : [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
@@ -37,6 +55,19 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            {user && (
+              <div className="flex items-center space-x-4">
+                <span className="text-sm text-gray-700 dark:text-gray-300">
+                  Selamat datang, <span className="font-semibold text-jungle-600 dark:text-jungle-400">{user.displayName || user.email?.split('@')[0]}</span>
+                </span>
+                <button
+                  onClick={handleSignOut}
+                  className="px-3 py-1 text-sm bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
@@ -83,6 +114,19 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
+              {user && (
+                <div className="px-3 py-2 flex flex-col space-y-2">
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
+                    Selamat datang, <span className="font-semibold text-jungle-600 dark:text-jungle-400">{user.displayName || user.email?.split('@')[0]}</span>
+                  </span>
+                  <button
+                    onClick={handleSignOut}
+                    className="px-3 py-1 text-sm bg-red-600 text-white rounded hover:bg-red-700 transition-colors w-fit"
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
             </div>
           </motion.div>
         )}

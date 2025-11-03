@@ -1,0 +1,8 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/a23883e62b798d29.js","/_next/static/chunks/247eb132b7f7b574.js","/_next/static/chunks/4ac15a6332f74a69.js","/_next/static/chunks/2e2464234b881928.js"],"ViewportBoundary"]
+4:I[97367,["/_next/static/chunks/a23883e62b798d29.js","/_next/static/chunks/247eb132b7f7b574.js","/_next/static/chunks/4ac15a6332f74a69.js","/_next/static/chunks/2e2464234b881928.js"],"MetadataBoundary"]
+5:"$Sreact.suspense"
+:HL["/_next/static/chunks/9dc5c5ca2e925b27.css","style"]
+0:{"buildId":"USkPHexz9xPMyykXLGPGu","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"head":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isHeadPartial":false,"staleTime":300}
+3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:[["$","title","0",{"children":"Portfolio PWA"}],["$","meta","1",{"name":"description","content":"Modern Progressive Web App Portfolio"}],["$","link","2",{"rel":"manifest","href":"/manifest.json"}]]
