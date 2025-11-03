@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import AudioVisualizer from '@/components/AudioVisualizer'
 
 interface Track {
   name: string
@@ -247,6 +248,9 @@ export default function MusicPlayer() {
                   {tracks[currentTrack].name}
                 </h3>
               </div>
+
+              {/* Audio Visualizer */}
+              <AudioVisualizer audioRef={audioRef} isPlaying={isPlaying} />
 
               {/* Progress Bar */}
               <div className="mb-6">
